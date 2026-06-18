@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no"
+    />
+    <meta name="theme-color" content="#07170f" />
+    <title>Street Striker</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="game-container"></div>
+
+      <div class="hud">
+        <div class="scoreboard-wrap">
+          <span class="live-dot">LIVE</span>
+          <div class="scoreboard" aria-live="polite">
+            <span class="team home"><i></i>MUXI</span>
+            <strong id="homeScore">0</strong>
+            <span id="clock" class="clock">01:30</span>
+            <strong id="awayScore">0</strong>
+            <span class="team away">RUSH<i></i></span>
+          </div>
+          <span id="cameraMode" class="camera-mode">LIVE · PLAYER FOCUS</span>
+        </div>
+        <div class="status-strip">
+          <div class="meter-row">
+            <span id="stamina">Turbo 100%</span>
+            <span class="meter"><i id="staminaFill"></i></span>
+          </div>
+          <span id="spark">Spark x1</span>
+          <button id="muteButton" class="icon-button" type="button" aria-label="静音">SND</button>
+        </div>
+      </div>
+
+      <div id="replayBadge" class="replay-badge is-hidden">
+        <span></span>
+        INSTANT REPLAY
+      </div>
+      <div id="goalOverlay" class="goal-overlay is-hidden">
+        <span>STREET STRIKER</span>
+        <strong>GOAL!</strong>
+      </div>
+      <div class="cinematic-bar top"></div>
+      <div class="cinematic-bar bottom"></div>
+
+      <div id="message" class="message">抢球，传球，找角度射门</div>
+
+      <div id="startPanel" class="start-panel">
+        <div class="start-copy">
+          <div class="crest" aria-hidden="true">SS</div>
+          <p class="kicker">Arcade football · 4v4</p>
+          <h1>Street Striker</h1>
+          <p>90 秒街头足球。电脑会跑位和防守，你负责抢节奏、打穿防线。</p>
+          <div class="feature-line">
+            <span>玩家聚焦</span>
+            <span>进球特写</span>
+            <span>多机位回放</span>
+          </div>
+          <div class="keyboard-guide" aria-label="键盘操作">
+            <span><kbd>WASD</kbd> 移动</span>
+            <span><kbd>Q</kbd> 传球</span>
+            <span><kbd>E</kbd> 射门</span>
+            <span><kbd>Shift</kbd> 冲刺</span>
+          </div>
+          <button id="startButton" type="button">开始比赛</button>
+        </div>
+      </div>
+
+      <div class="touch-controls" aria-label="移动端控制">
+        <div id="stickBase" class="stick-base">
+          <div id="stickKnob" class="stick-knob"></div>
+        </div>
+        <div class="action-pad">
+          <button id="dashButton" class="action-button dash" type="button">冲</button>
+          <button id="passButton" class="action-button pass" type="button">传</button>
+          <button id="shootButton" class="action-button shoot" type="button">射</button>
+        </div>
+      </div>
+
+      <div class="desktop-help">
+        <b>YOU</b>
+        <span><kbd>WASD</kbd> 移动</span>
+        <span><kbd>Q</kbd> 传</span>
+        <span><kbd>E</kbd> 射</span>
+        <span><kbd>Shift</kbd> 冲</span>
+        <span><kbd>P</kbd> 暂停</span>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
